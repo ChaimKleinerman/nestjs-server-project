@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  id: String!
+  content: String!
+  checked: Boolean!
+}
+
+type User {
+  id: String!
+  name: String!
+  birthday: String!
+  email: String!
+  todos: [Todo!]!
+}
+
+type Query {
+  users: [User!]!
+}
+
+type Mutation {
+  createUser(name: String!, birthday: String!, email: String!): User!
+}
